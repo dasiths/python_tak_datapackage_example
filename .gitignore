@@ -1,3 +1,5 @@
+/.vscode
+
 /tmp/**/*.zip
 /tmp/**/*.kml
 /tmp/**/*.kmz

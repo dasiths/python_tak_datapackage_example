@@ -13,11 +13,9 @@ class DataPackageSender:
 
             # todo: generate data package temp folder using a template or pycot
             dataPackagePath = os.path.join(currentPath, "data-package")
-            uid = "1793BD2E-28A9-46A7-83CF-670F6BBD3347"
-            dataPackageFolderPath = os.path.join(dataPackagePath, uid)
 
             # Create zip
-            shutil.make_archive(os.path.join(currentPath, "tmp", "package"), 'zip', dataPackageFolderPath)
+            shutil.make_archive(os.path.join(currentPath, "tmp", "package"), 'zip', dataPackagePath)
             zippedDataPackagePath = os.path.join(currentPath, "tmp", "package.zip")
 
             # Calculate SHA256 Hash
