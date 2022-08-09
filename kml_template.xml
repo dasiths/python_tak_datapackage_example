@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns="http://www.opengis.net/kml/2.2">
+  <GroundOverlay>
+    <name>RDF</name>
+    <Icon>
+      <href>files/image.Png</href>
+    </Icon>
+    <altitude>0</altitude>
+    <altitudeMode>clampToGround</altitudeMode>
+    <gx:LatLonQuad>
+      <coordinates>{coordinates}</coordinates>
+    </gx:LatLonQuad>
+  </GroundOverlay>
+</kml>
