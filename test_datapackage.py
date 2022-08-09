@@ -2,6 +2,7 @@ import hashlib
 import os
 import socket
 import shutil
+import threading
 import requests
 
 class DataPackageSender:
@@ -69,6 +70,9 @@ class DataPackageSender:
         s.sendall(bytes(message, "utf-8"))
         s.close()
 
-if __name__ == "__main__":
+def main():
     d = DataPackageSender()
     d.sendCotDataPackage("","","")
+
+if __name__ == "__main__":
+  main()
