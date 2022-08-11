@@ -3,5 +3,6 @@
 /tmp/**/*.zip
 /tmp/**/*.kml
 /tmp/**/*.kmz
+/tmp/data-package/
 /kmz-server-root/kmz/
 /kmz-server-root/kml/

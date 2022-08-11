@@ -59,9 +59,9 @@ This method requires more orchestration though. The python client needs to uploa
     takServerTcpPort = 8087
     takServerUrl = "localhost:8080"
   ```
-- open the `data-package/message.cot` and update the start/time/stale to current values. Start date needs to be earlier than now while stale time needs to be later then now.
+- open the `data-package-template/FILES/message.cot` and update the start/time/stale to current values. Start date needs to be earlier than now while stale time needs to be later then now.
   ```xml
-    <event version="2.0" uid="1793BD2E-28A9-46A7-83CF-670F6BBD3347" type="a-h-S-C" time="2022-08-03T02:20:13.00Z" start="2022-08-03T02:25:11.95Z" stale="2023-10-24T02:25:11.95Z" how="h-g-i-g-o">
+    <event version="2.0" uid="{uid}" type="a-h-S-C" time="2022-08-03T02:20:13.00Z" start="2022-08-03T02:25:11.95Z" stale="2023-10-24T02:25:11.95Z" how="h-g-i-g-o">
   ```
 - Make sure your TAK client (WinTak) is connected to the TAK Server.
 - Run the following from the repo root
