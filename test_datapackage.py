@@ -48,7 +48,7 @@ class DataPackageSender:
             with open(fileTransferTemplateFilePath, 'r') as templateFile:
                 templateContent = templateFile.read()
             fileSize = os.path.getsize(zippedDataPackagePath)
-            templateContent = templateContent.format(sendUrl=putUrl, fileHash=fileHash, fileSize=fileSize)
+            templateContent = templateContent.format(sendUrl=putUrl, fileHash=fileHash, fileSize=fileSize, filename="package.zip")
             self.sendCotDirect(takServerHost, takServerTcpPort, templateContent)
             print("File transfer request COT message sent to Tak Server")
         except Exception as e:
