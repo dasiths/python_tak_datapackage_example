@@ -101,7 +101,7 @@ In order to provide Static Image Overlays in a TAK Client, the following steps m
     </detail>
     </event>
   ```
-  - The `sendeUid` in the above file needs to match the `creatorUid` from the previous POST API call.
+  - The `senderUid` in the above file needs to match the `creatorUid` from the previous POST API call.
 
 - *Note: The type must be `b-f-t-r` in order for the data packages to be displayed*
 - Replace the `senderUrl` attribute with the url used in the 2nd API Call during the previous step

@@ -6,7 +6,7 @@ import threading
 import requests
 
 class DataPackageSender:
-    def sendCotDataPackage(self, uid, cotMessage, imagePath):
+    def sendCotDataPackage(self):
         try:
             takServerHost = "localhost"
             takServerTcpPort = 8087
@@ -21,7 +21,7 @@ class DataPackageSender:
             zipFilePrefix = "package"
             zipFileName = f"{zipFilePrefix}.zip"
 
-            dataPackagePathTemplate = os.path.join(currentPath, "data-package-template")
+            dataPackageTemplatePath = os.path.join(currentPath, "data-package-template")
             dataPackagePath = os.path.join(currentPath, "tmp", "data-package")
             cotFile = os.path.join(dataPackagePath, "FILES", "message.cot")
             manifestFile = os.path.join(dataPackagePath, "MANIFEST", "manifest.xml")
@@ -30,7 +30,7 @@ class DataPackageSender:
                        
             # copy template to working directory
             shutil.rmtree(dataPackagePath)
-            shutil.copytree(dataPackagePathTemplate, dataPackagePath)
+            shutil.copytree(dataPackageTemplatePath, dataPackagePath)
 
             # Update template           
             with open(cotFile, 'r') as cotTemplateFile:
@@ -98,7 +98,7 @@ class DataPackageSender:
 
 def main():
     d = DataPackageSender()
-    d.sendCotDataPackage("","","")
+    d.sendCotDataPackage()
 
 if __name__ == "__main__":
   main()
