@@ -24,7 +24,7 @@ In this example, we generate an image every second, create a KMZ file and host i
 
 - Open a terminal to the root of the repo and start the KMZ generation script. It will create a new image overlay every second.
   ```bash
-  python3 .\test_kmz.py
+  python3 ./test_kmz.py
   ```
 - Start the simple http server in `kmz-server-root `
   ```bash
@@ -66,7 +66,7 @@ This method requires more orchestration though. The python client needs to uploa
 - Make sure your TAK client (WinTak) is connected to the TAK Server.
 - Run the following from the repo root
   ```bash
-  python3 .\test_datapackage.py
+  python3 ./test_datapackage.py
   ```
 
 WinTak should now prompt you to download a data package. Accept it. Navigate to the LAT/LONG of the cot message payload `lat="41.9545621" lon="-73.12329"` and you should see the point appear. Hovering/Clicking on it will display the image overlay.
